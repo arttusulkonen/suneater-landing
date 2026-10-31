@@ -25,13 +25,13 @@ export function Hero({ lang }: { lang: Lang }) {
         src={hero.image}
         fallback={null}
         fetchPriority="high"
-        className="absolute inset-0 -z-30 h-full w-full object-cover"
+        className="absolute inset-0 -z-30 h-full w-full object-cover object-[70%_50%]"
       />
       <div
         aria-hidden="true"
         className="absolute inset-0 -z-20 bg-[radial-gradient(ellipse_at_50%_35%,rgba(217,164,65,0.14),transparent_60%)]"
       />
-      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-ink/75 via-ink/55 to-ink" />
+      <div aria-hidden="true" className="absolute inset-0 -z-10 bg-linear-to-b from-ink/50 via-ink/35 to-ink" />
 
       <div className="mx-auto max-w-4xl text-center">
         <FallbackImage
