@@ -64,6 +64,17 @@ export interface SiteContent {
   footer: {
     contactLabel: Localized;
   };
+  /** Окно подтверждения возраста при первом визите. */
+  ageGate: {
+    /** false = окно не показывается. */
+    enabled: boolean;
+    question: Localized;
+    note: Localized;
+    confirm: Localized;
+    decline: Localized;
+    /** Сообщение после ответа «нет». */
+    declined: Localized;
+  };
   ui: {
     languageSwitcherLabel: Localized;
   };
@@ -115,6 +126,21 @@ export const content: SiteContent = {
 
   footer: {
     contactLabel: { fi: 'Yhteistyö ja HoReCa', en: 'Trade & HoReCa' },
+  },
+
+  ageGate: {
+    enabled: true,
+    question: { fi: 'Oletko vähintään 18-vuotias?', en: 'Are you at least 18 years old?' },
+    note: {
+      fi: 'Sivustolla esitellään alkoholijuomia.',
+      en: 'This website presents alcoholic beverages.',
+    },
+    confirm: { fi: 'Kyllä, olen', en: 'Yes, I am' },
+    decline: { fi: 'En ole', en: 'No' },
+    declined: {
+      fi: 'Valitettavasti sivusto on tarkoitettu vain täysi-ikäisille. Tervetuloa takaisin, kun olet täyttänyt 18 vuotta.',
+      en: 'Sorry, this website is for adults only. You are welcome back once you have turned 18.',
+    },
   },
 
   ui: {

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { AgeGate } from './components/AgeGate';
 import { Footer } from './components/Footer';
 import { Hero } from './components/Hero';
 import { LanguageSwitcher } from './components/LanguageSwitcher';
@@ -43,6 +44,7 @@ export default function App() {
         <Lineup lang={lang} />
       </main>
       <Footer lang={lang} />
+      <AgeGate lang={lang} onLangChange={setLang} />
     </>
   );
 }
